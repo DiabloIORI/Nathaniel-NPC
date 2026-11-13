@@ -2,93 +2,93 @@ APPEND FHNATJ
 
 IF
 ~Global("FHSola1","LOCALS",1)~ THEN BEGIN FHSola1
-SAY ~Um, <CHARNAME>? Could I have a word...?~
+SAY ~呃，<CHARNAME>？能说句话吗……？~
 IF ~~ THEN DO ~SetGlobal("FHSola1","LOCALS",2)~
-REPLY ~Of course. What is it?~ + FHSola1_what
-++ ~Go on. What's on your mind, Nathaniel?~ + FHSola1_what
-++ ~I don't want to hear it, Nathaniel. I'm not interested.~ + FHSola1_notinterested
+REPLY ~当然。什么事？~ + FHSola1_what
+++ ~说吧。你在想什么，纳撒尼尔？~ + FHSola1_what
+++ ~我不想听，纳撒尼尔。我没兴趣。~ + FHSola1_notinterested
 END
 
 IF ~~ THEN BEGIN FHSola1_what
-SAY ~Well. I.~
+SAY ~嗯。我。~
 =
-~I've noticed you spending a lot of time with Solaufein. That's all. I know it's probably nothing, but ... you know.~
-++ ~Relax, Nathaniel. Solaufein's just my friend.~ + FHSola1_friend
-++ ~I hadn't noticed him looking at me in any particular way. I think you're probably getting worried over nothing.~ + FHSola1_friend
-++ ~Oh! Well, I'll mention it to him. I don't want him to misinterpret things.~ + FHSola1_mention
-++ ~Well, he's a lot more interesting than you are, so of course I'm going to spend time with him!~ + FHSola1_interesting
-++ ~I enjoy his conversation, Nathaniel. Is that wrong?~ + FHSola1_wrong
+~我注意到你跟索劳芬待在一起的时间很多。就这样。我知道那大概没什么，可是……你知道的。~
+++ ~放松，纳撒尼尔。索劳芬只是我的朋友。~ + FHSola1_friend
+++ ~我没注意到他用什么特别的方式看我。我觉得你大概是白担心了。~ + FHSola1_friend
+++ ~哦！嗯，我会跟他提一提。我不想让他误会。~ + FHSola1_mention
+++ ~嗯，他可比你有意思多了，我当然要跟他待在一起！~ + FHSola1_interesting
+++ ~我喜欢跟他聊天，纳撒尼尔。这有错吗？~ + FHSola1_wrong
 END
 
 IF ~~ THEN BEGIN FHSola1_notinterested
-SAY ~But... Oh, never mind.~
+SAY ~可是……哦，算了。~
 IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN FHSola1_friend
-SAY ~Of course. I just don't want him to get ideas ... being so alien, he might--~
+SAY ~当然。我只是不想让他多想……他那么异族，他可能会——~
 =
-~But let's be getting on. I didn't mean for this to get out of proportion.~
+~可我们该继续走了。我不是想让这事闹大。~
 IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN FHSola1_mention
-SAY ~Thanks, <CHARNAME>. That's a weight off my mind. But let's be getting on. I didn't mean for this to get out of proportion.~
+SAY ~谢谢，<CHARNAME>。这下我心里一块石头落地了。可我们该继续走了。我不是想让这事闹大。~
 IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN FHSola1_interesting
-SAY ~You don't have to insult me, <CHARNAME>! I don't mind about you spending time with him, I just don't want him getting ideas!~
+SAY ~你不必侮辱我，<CHARNAME>！我不介意你跟他待在一起，我只是不想让他多想！~
 =
-~Look. I didn't want this to get out of proportion. Let's get going.~
+~听着。我不是想让这事闹大。我们走吧。~
 IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN FHSola1_wrong
-SAY ~No, no, of course not. I just don't want him to get the wrong idea, that's all.~
+SAY ~不，不，当然不会。我只是不想让他想歪了，就是这样。~
 =
-~But let's be getting on. I didn't mean for this to get out of proportion.~
+~可我们该继续走了。我不是想让这事闹大。~
 IF ~~ THEN EXIT
 END
 
 IF
 ~Global("FHSola2","LOCALS",1)~ THEN BEGIN FHSola2
-SAY ~<CHARNAME>! What was that about?~
+SAY ~<CHARNAME>！那是怎么回事？~
 IF ~~ THEN DO ~SetGlobal("FHSola2","LOCALS",2)~
-REPLY ~What was what about?~ + FHSola2_what
-++ ~Oh, you mean the hand thing. I ... yes...~ + FHSola2_yes
-++ ~I know, I was confused too! I'm going to say something...~ + FHSola2_say
-++ ~Nothing! I mean, nothing, of course.~ + FHSola2_yes
-++ ~Nathaniel? I'm ... I'm sorry you had to see that, but I've been meaning to tell you for some time...~ + FHSola2_niceish
-++ ~"That" was Solaufein and I bonding, Nathaniel. Sorry, and all that.~ + FHSola2_nasty
+REPLY ~什么是怎么回事？~ + FHSola2_what
+++ ~哦，你说手的事。我……是……~ + FHSola2_yes
+++ ~我知道，我也糊涂了！我打算说点什么……~ + FHSola2_say
+++ ~没什么！我是说，当然没什么。~ + FHSola2_yes
+++ ~纳撒尼尔？我……我很抱歉让你看见那个，可我早就想告诉你了……~ + FHSola2_niceish
+++ ~「那个」是我跟索劳芬在亲近，纳撒尼尔。抱歉，之类的话。~ + FHSola2_nasty
 END
 
 IF ~~ THEN BEGIN FHSola2_what
-SAY ~Touching him like that! Look, I'm sure you - you mean well, but the way he looks at you, it's as if ... as if you and I aren't close. Please, can you talk to him about it?~
-++ ~Yes, I was confused too. I'll mention it to him.~ + FHSola2_say
-++ ~I'm sure it's nothing to be worried about, Nathaniel. Solaufein's a friend.~ + FHSola2_friend
-++ ~He's Drow, Nathaniel. He doesn't know how surfacer relationships work, so he must not have realised.~ + FHSola2_friend
-++ ~Nathaniel ... I know we're very close, but Solaufein's just ... well...~ + FHSola2_niceish
-++ ~I enjoy talking to him, but if it makes you uneasy I'll say something.~ + FHSola2_say
-++ ~I don't want something like this to come between us, Nathaniel.~ + FHSola2_friend
+SAY ~像那样碰他！听着，我确信你——你是好意，可他看你的样子，就好像……好像你我并不亲密。求你，能跟他谈谈这事吗？~
+++ ~是，我也糊涂了。我会跟他提。~ + FHSola2_say
+++ ~我确信没什么可担心的，纳撒尼尔。索劳芬是朋友。~ + FHSola2_friend
+++ ~他是卓尔，纳撒尼尔。他不懂地表人的关系是怎么样的，所以他一定没意识到。~ + FHSola2_friend
+++ ~纳撒尼尔……我知道我们很亲密，可索劳芬只是……嗯……~ + FHSola2_niceish
+++ ~我喜欢跟他聊天，可若这让你不安，我会说点什么。~ + FHSola2_say
+++ ~我不想这种事横在我们之间，纳撒尼尔。~ + FHSola2_friend
 END
 
 IF ~~ THEN BEGIN FHSola2_yes
-SAY ~Is that all you have to say? <CHARNAME>--~
-++ ~What? Look, don't be so suspicious! Solaufein's a friend, nothing more!~ + FHSola2_friend
-++ ~I'm sorry, Nathaniel. I was just at a loss as to what to say ... I don't want you to be jealous.~ + FHSola2_friend
-++ ~Solaufein's Drow, Nathaniel! He doesn't know how surfacer relationships work!~ + FHSola2_friend
-++ ~No, it's not. I enjoy talking to him, and touching him too!~ + FHSola2_nasty
-++ ~No, it's not all I have to say. I ... didn't want to have to tell you, but I like Solaufein ... a great deal.~ + FHSola2_niceish
+SAY ~你就只有这些话说吗？<CHARNAME>——~
+++ ~什么？听着，别这么疑心！索劳芬是朋友，仅此而已！~ + FHSola2_friend
+++ ~对不起，纳撒尼尔。我只是不知该说什么……我不想你吃醋。~ + FHSola2_friend
+++ ~索劳芬是卓尔，纳撒尼尔！他不懂地表人的关系是怎么样的！~ + FHSola2_friend
+++ ~不，不是那样。我喜欢跟他聊天，也喜欢碰他！~ + FHSola2_nasty
+++ ~不，不只是这些。我……本来不想非告诉你不可，可我喜欢索劳芬……非常喜欢。~ + FHSola2_niceish
 END
 
 IF ~~ THEN BEGIN FHSola2_say
-SAY ~Thank you. That would set my mind at rest.~
+SAY ~谢谢你。那会让我安心。~
 IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN FHSola2_niceish
-SAY ~What? You mean ... after what we've been through, you just take up with some exotic Drow male? That's it, <CHARNAME>. You led me on, and I'm not standing for it any longer!~
+SAY ~什么？你是说……经历这么多之后，你就随便跟一个异族卓尔雄性好了？够了，<CHARNAME>。你一直吊着我，我再也受不了了！~
 IF ~~ THEN DO
 ~SetGlobal("NathRomanceActive","GLOBAL",3)
 LeaveParty()
@@ -97,7 +97,7 @@ EXIT
 END
 
 IF ~~ THEN BEGIN FHSola2_nasty
-SAY ~Oh, I see. So all that we did was just a dalliance until you could find something better. You just take up with some exotic Drow male. That's it, <CHARNAME>. You led me on, and I'm not standing for it!~
+SAY ~哦，我明白了。所以我们做的一切不过是场消遣，等你找到更好的。你就随便跟一个异族卓尔雄性好了。够了，<CHARNAME>。你一直吊着我，我受不了！~
 IF ~~ THEN DO
 ~SetGlobal("NathRomanceActive","GLOBAL",3)
 LeaveParty()
@@ -106,13 +106,13 @@ EXIT
 END
 
 IF ~~ THEN BEGIN FHSola2_friend
-SAY ~Fair enough, but I'd still appreciate it if you said something to him. I'm yours, <CHARNAME>, and I'd like to think that I can count on you.~
+SAY ~行，可你若能跟他说点什么，我还是会很感激。我是你的，<CHARNAME>，我希望能指望得上你。~
 IF ~~ THEN EXIT
 END
 
 IF
 ~Global("FHSola3","LOCALS",1)~ THEN BEGIN FHSola3
-SAY ~I don't think I can stand this any more. I gave everything to you. Now you're going to throw all that in my face and parade around with that elf? I'm going, <CHARNAME>. I don't want to be around you.~
+SAY ~我觉得我再也受不了了。我把一切都给了你。现在你要把那些全摔在我脸上，还带着那个精灵到处显摆？我走了，<CHARNAME>。我不想待在你身边。~
 IF ~~ THEN DO ~SetGlobal("FHSola3","LOCALS",3)
 SetGlobal("NathRomanceActive","GLOBAL",3)
 LeaveParty()

@@ -8,18 +8,18 @@ OR(2)
 Alignment("Anomen",LAWFUL_GOOD)
 Alignment("Anomen",LAWFUL_NEUTRAL)
 Global("FHKelsAnoTalk","GLOBAL",0)~ THEN BFHNAT FHKelsAno
-~...No, really, I just think you should try to talk to him. It's not as if he's done anything to you.~
+~……不，真的，我只是觉得你该试着跟他说话。他又没对你做什么。~
 DO ~SetGlobal("FHKelsAnoTalk","GLOBAL",1)~
 == BJ#KLSY
-~Hasn't done...? Are you serious?~
+~没做什么……？你认真的？~
 == BFHNAT
-~Yes. I'm sure if you actually talked you'd find you got on a lot better.~
+~是。我确信你们真谈过之后，会发现彼此相处得好得多。~
 == BJ#KLSY
-~Look, Nathaniel, for Waukeen's sake! If you love Anomen so much why don't you take him and do <CHARNAME> and me a favour?~
+~听着，纳撒尼尔，看在沃金的份上！你若这么爱阿诺门，为什么不把他领走，帮<CHARNAME>和我一个忙？~
 == BFHNAT
-~Excuse me? For one thing, Anomen isn't-- and for another-- it's just - just wrong!~
+~什么？一来，阿诺门不是——二来——那只是——根本不对！~
 == BJ#KLSY
-~*sigh* Look. I'm sorry. But it's not going to happen.~
+~*叹气*听着。对不起。可那不会发生。~
 EXIT
 
 CHAIN
@@ -30,46 +30,46 @@ OR(2)
 Alignment("Anomen",LAWFUL_GOOD)
 Alignment("Anomen",LAWFUL_NEUTRAL)
 Global("FHKelsAnoTalk","GLOBAL",0)~ THEN BFHNAT FHKelsAno2
-~...No, really, I just think you should try to talk to him. It's not as if he's done anything to you.~
+~……不，真的，我只是觉得你该试着跟他说话。他又没对你做什么。~
 DO ~SetGlobal("FHKelsAnoTalk","GLOBAL",1)~
 == BJ#KLSY
-~Hasn't done...? Are you serious?~
+~没做什么……？你认真的？~
 == BFHNAT
-~Yes. I'm sure if you actually talked you'd find you got on a lot better.~
+~是。我确信你们真谈过之后，会发现彼此相处得好得多。~
 == BJ#KLSY
-~Look, Nathaniel, for Waukeen's sake! If you love Anomen so much why don't you take him? Then at least he'd be out of my face!~
+~听着，纳撒尼尔，看在沃金的份上！你若这么爱阿诺门，为什么不把他领走？那样至少他就不在我眼前烦我了！~
 == BFHNAT
-~Excuse me? For one thing, Anomen isn't-- and for another-- it's just - just wrong!~
+~什么？一来，阿诺门不是——二来——那只是——根本不对！~
 == BJ#KLSY
-~*sigh* Look. I'm sorry. But it's not going to happen.~
+~*叹气*听着。对不起。可那不会发生。~
 EXIT
 
 CHAIN IF
 ~InParty("Nath")
 !StateCheck("Nath",STATE_SLEEPING)
 Global("FHKelsTalk","GLOBAL",0)~ THEN BJ#KLSY FHKels1
-~...ah, here it is. I was worried I'd lost it for a moment there.~
+~……啊，在这儿。我刚才还担心把它弄丢了。~
 DO ~SetGlobal("FHKelsTalk","GLOBAL",1)~
 == BFHNAT
-~Hmmm?~
+~嗯？~
 == BJ#KLSY
-~Oh, it's just one of my notebooks. I doubt what's written in there is particularly earth-shattering, but I'd be sorry to lose it.~
+~哦，只是我的一本笔记。我不觉得里面写的东西有多了不起，可丢了我会可惜。~
 == BFHNAT
-~It is quite pretty.~
+~它挺好看的。~
 == BJ#KLSY
-~Yes ... I can't remember where I got it from now, but it's stayed with me for a while now. Since before I left home.~
+~是……我现在记不得是从哪儿弄来的，可它跟着我有一阵了。从我离家之前就有了。~
 == BFHNAT
-~Can you see yourself going back there? Home, I mean?~
+~你想象得到自己回那儿去吗？我是说，家。~
 == BJ#KLSY
-~I don't know - I hadn't really thought about it. I mean, we're with <CHARNAME> now, aren't we?~
+~我不知道——我没真想过。我是说，我们现在跟着<CHARNAME>，对吧？~
 == BFHNAT
-~Not even if you miss the people you cared about?~
+~就算你想念你在意的人，也不回去？~
 == BJ#KLSY
-~I guess not, the way things are between my family and me right now.~
+~我想不会吧，就我跟我家现在这样。~
 =
-~But this isn't really about me, is it?~
+~可这其实不是在说我，对吧？~
 == BFHNAT
-~What?~
+~什么？~
 == BJ#KLSY
-~Don't worry about it.~
+~别在意。~
 EXIT
